@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <style>
+        .heading{
+            text-align: center;
+        }
+        .discription{
+            text-align: center;
+            /* padding-left: 30px;
+            padding-right: 30px; */
+            padding: 30px;
+        }
+        button{
+            text-align: center;
+            padding: 12px;
+            background-color: blue;
+            color: white;
+            border-radius: 30px;
+            border: none;
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <div class="heading">
+        <h1>Mental Health </h1>
+
+    </div>
+     
+
+    <div class="discription">
+        Farming is a noble profession, but it can also be incredibly demanding. Long hours, unpredictable weather, and financial pressures can all take a toll on a farmer's mental health. In India, these challenges are compounded by socio-economic factors like debt, lack of social support, and stigma surrounding mental health.
+
+The good news is that there are steps farmers can take to prioritize their mental well-being, even in the face of adversity. Here are some simple tips and helpful resources available in India:
+<br>
+<br>
+<b>1. Recognize the Signs: </b>
+
+  <li> <b> Physical: </b> Fatigue, changes in appetite or sleep, headaches, body aches. <br> </li>
+   <li>  <b> Emotional:</b> Feeling overwhelmed, anxious, sad, hopeless, irritable. <br> </li>
+   <li> <b> Behavioral:</b> Social withdrawal, neglecting responsibilities, substance abuse. <br> </li>
+<b>2. Practice Self-Care: </b>
+
+<li><b>Connect with others: </b> Talk to family, friends, or fellow farmers about your feelings. Joining a support group can be especially helpful.</li>
+<li> <b> Stay physically active:</b> Regular exercise releases endorphins, which boost mood and reduce stress. Even a brisk walk can make a difference.</li>
+<li> <b> Get enough sleep: </b> Aim for 7-8 hours of sleep per night. A well-rested mind is better equipped to handle challenges.</li>
+<li> <b>Eat healthy foods: </b>Nourish your body with nutritious meals to maintain energy and emotional well-being.</li>
+<li> <b>Relaxation techniques: </b>Try yoga, meditation, deep breathing, or spending time in nature to calm your mind and manage stress.</li>
+
+<b>3. Helpful Resources in India:</b>
+<li> <b>Mindtree Foundation:</b> This NGO provides mental health awareness programs and support services in rural communities. </li>
+<li>
+    <b> AASRA: </b>AASRA is a suicide prevention helpline available 24/7 across India. Their number is 1260.
+</li>
+   
+    </div>
+    <div class="btn" >
+        <a href="{{ url_for('connect') }}"><button>Connect to us</button></a>
+    </div>
+
+	{% endblock %} 
+

@@ -1,0 +1,590 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+
+
+
+    <!-- Insurance -->
+<style>
+.parent{
+    text-align: center;
+
+}
+.heading{
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    font-weight: bold;
+    background-image: url(insurance-background.jpg);
+    background-repeat: no-repeat;
+    background-size:100% ;
+    margin-bottom: 20;
+}
+
+/* figma style start  */
+.insurance-1-child,
+.insurance-1-item {
+  position: relative;
+  border-radius: var(--br-xl);
+}
+.insurance-1-child {
+  width: 349px;
+  height: 979px;
+  background-color: var(--color-gainsboro);
+  display: none;
+  max-width: 100%;
+}
+.insurance-1-item {
+  width: 295px;
+  height: 258px;
+  object-fit: cover;
+  z-index: 1;
+}
+.fire-insurance1,
+.lorem-ipsum-dolor {
+  height: 48px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.lorem-ipsum-dolor {
+  align-self: stretch;
+  height: 216px;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  text-align: center;
+  flex-shrink: 0;
+}
+.fire-insurance-parent {
+  width: 279px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 42px;
+}
+.know-more-button-child {
+  height: 78px;
+  width: 295px;
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-blue);
+  display: none;
+}
+.know-more {
+  height: 48px;
+  position: relative;
+  font-size: var(--font-size-21xl);
+  display: inline-block;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: 1;
+}
+.know-more-button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mini);
+  background-color: var(--color-blue);
+  align-self: stretch;
+  border-radius: var(--br-6xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+.know-more-button1:hover,
+.know-more-button2:hover,
+.know-more-button:hover {
+  background-color: var(--color-blueviolet);
+}
+.fire-insurance,
+.insurance-1,
+.secondary-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.fire-insurance {
+  align-self: stretch;
+  align-items: center;
+  padding: 0 7px;
+  gap: var(--gap-223xl);
+}
+.insurance-1,
+.secondary-frame {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.insurance-1 {
+  align-self: stretch;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gainsboro);
+  align-items: center;
+  padding: var(--padding-8xl) var(--padding-xl) var(--padding-xl);
+  gap: var(--gap-29xl);
+}
+.secondary-frame {
+  width: 355px;
+  align-items: flex-start;
+  padding: 0 6px 0 0;
+  font-size: var(--font-size-21xl);
+}
+.insurance-2-child,
+.rectangle-frame-icon {
+  position: relative;
+  border-radius: var(--br-xl);
+}
+.insurance-2-child {
+  width: 349px;
+  height: 979px;
+  background-color: var(--color-gainsboro);
+  display: none;
+  max-width: 100%;
+}
+.rectangle-frame-icon {
+  width: 295px;
+  height: 258px;
+  object-fit: cover;
+  z-index: 1;
+}
+.lorem-ipsum-dolor1,
+.tractor-insurance {
+  height: 44px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.lorem-ipsum-dolor1 {
+  width: 278px;
+  height: 216px;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  text-align: center;
+  flex-shrink: 0;
+}
+.insurance-rect {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-27xl);
+}
+.know-more-button-item {
+  height: 78px;
+  width: 295px;
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-blue);
+  display: none;
+}
+.know-more1 {
+  height: 48px;
+  position: relative;
+  font-size: var(--font-size-21xl);
+  display: inline-block;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: 1;
+}
+.know-more-button1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mini);
+  background-color: var(--color-blue);
+  width: 295px;
+  border-radius: var(--br-6xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  z-index: 1;
+}
+.insurance-rect-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-223xl);
+}
+.insurance-2,
+.insurance-3-child {
+  width: 349px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gainsboro);
+  max-width: 100%;
+}
+.insurance-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xl) 18px var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-29xl);
+}
+.insurance-3-child {
+  height: 979px;
+  position: relative;
+  display: none;
+}
+.insurance-3-item {
+  width: 295px;
+  height: 258px;
+  border-radius: var(--br-xl);
+  object-fit: cover;
+}
+.drought-insurance,
+.insurance-3-item,
+.lorem-ipsum-dolor2 {
+  position: relative;
+  z-index: 1;
+}
+.lorem-ipsum-dolor2 {
+  width: 278px;
+  height: 216px;
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  color: var(--color-black);
+  text-align: center;
+  flex-shrink: 0;
+}
+.drought-insurance-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-27xl);
+}
+.know-more-button-inner {
+  height: 78px;
+  width: 295px;
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-blue);
+  display: none;
+}
+.know-more2 {
+  height: 48px;
+  position: relative;
+  font-size: var(--font-size-21xl);
+  display: inline-block;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: 1;
+}
+.know-more-button2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mini);
+  background-color: var(--color-blue);
+  width: 295px;
+  border-radius: var(--br-6xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  z-index: 1;
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-223xl);
+}
+.insurance-3,
+.insurance-frame {
+  display: flex;
+  box-sizing: border-box;
+}
+.insurance-3 {
+  width: 349px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gainsboro);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xl) 10px var(--padding-xl) 11px;
+  gap: var(--gap-29xl);
+  max-width: 100%;
+}
+.insurance-frame {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 391px 80px 97px 73px;
+  gap: 20px;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-blue);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1250px) {
+  .insurance-frame {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .insurance-1,
+  .insurance-2,
+  .insurance-3 {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .fire-insurance1 {
+    font-size: var(--font-size-13xl);
+  }
+  .drought-insurance,
+  .tractor-insurance {
+    font-size: var(--font-size-10xl);
+  }
+  .insurance-frame {
+    padding-left: 36px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .fire-insurance1 {
+    font-size: var(--font-size-5xl);
+  }
+  .lorem-ipsum-dolor {
+    font-size: var(--font-size-base);
+  }
+  .fire-insurance-parent {
+    gap: 21px;
+  }
+  .fire-insurance {
+    gap: var(--gap-102xl);
+  }
+  .insurance-1 {
+    gap: var(--gap-5xl);
+  }
+  .tractor-insurance {
+    font-size: var(--font-size-3xl);
+  }
+  .lorem-ipsum-dolor1 {
+    font-size: var(--font-size-base);
+  }
+  .insurance-rect {
+    gap: var(--gap-4xl);
+  }
+  .insurance-rect-parent {
+    gap: var(--gap-102xl);
+  }
+  .insurance-2 {
+    gap: var(--gap-5xl);
+  }
+  .drought-insurance {
+    font-size: var(--font-size-3xl);
+  }
+  .lorem-ipsum-dolor2 {
+    font-size: var(--font-size-base);
+  }
+  .drought-insurance-parent {
+    gap: var(--gap-4xl);
+  }
+  .frame-parent {
+    gap: var(--gap-102xl);
+  }
+  .insurance-3 {
+    gap: var(--gap-5xl);
+  }
+}
+   
+
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-poppins: Poppins;
+  --font-roboto: Roboto;
+
+  /* font sizes */
+  --font-size-21xl: 40px;
+  --font-size-xl: 20px;
+  --font-size-base: 16px;
+  --font-size-17xl: 36px;
+  --font-size-3xl: 22px;
+  --font-size-10xl: 29px;
+  --font-size-5xl: 24px;
+  --font-size-13xl: 32px;
+  --font-size-6xs: 7px;
+  --font-size-mini: 15px;
+  --font-size-181xl: 200px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gainsboro: #d9d9d9;
+  --color-blue: #0029ff;
+  --color-blueviolet: #264fff;
+  --color-black: #000;
+  --color-navy: #000570;
+  --color-gray-100: #777;
+  --colors-backgrounds-dark: #0f0f0f;
+  --color-gray-200: rgba(255, 255, 255, 0.2);
+  --color-gray-300: rgba(255, 255, 255, 0.19);
+  --color-lightgreen: #afe67f;
+  --color-dimgray: #646464;
+  --color-darkslateblue: #142971;
+
+  /* Gaps */
+  --gap-29xl: 48px;
+  --gap-5xl: 24px;
+  --gap-223xl: 242px;
+  --gap-102xl: 121px;
+  --gap-27xl: 46px;
+  --gap-4xl: 23px;
+  --gap-5xs: 8px;
+  --gap-sm: 14px;
+
+  /* Paddings */
+  --padding-8xl: 27px;
+  --padding-xl: 20px;
+  --padding-mini: 15px;
+  --padding-9xs: 4px;
+  --padding-5xs: 8px;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-6xl: 25px;
+}
+
+
+/* figma style end  */
+
+
+</style>      
+
+
+<div class="parent">
+
+    <div class="heading">
+        
+            <h1>Insurance</h1>
+
+
+    </div>
+    <div class="sub-heading">
+        <h3>Types of Insurance</h3>
+    </div>
+
+</div>
+<!-- <div class="overview-crop-insurance">
+ <img src="Insurance.png" alt="">
+   <h3>Crop Insurance</h3>
+   <p> losses due to natural calamities like floods, droughts, hailstorms, pests, and diseases. It's mandatory for farmers who avail loan from banks for notified crops.
+    losses due to deviations from weather parameters like rainfall, temperature, and wind speed.
+   </p>
+   <button>Know more </button>
+
+</div> -->
+
+  <!-- figma code  -->
+  <div class="insurance-frame">
+    <div class="secondary-frame">
+      <div class="insurance-1">
+        <div class="insurance-1-child"></div>
+        <img
+          class="insurance-1-item"
+          loading="eager"
+          alt=""
+          src="{{ url_for('static', filename='images/crop-insurances.jpg') }}"
+        />
+
+        <div class="fire-insurance">
+          <div class="fire-insurance-parent">
+            <b class="fire-insurance1">Crop Insurance</b>
+            <b class="lorem-ipsum-dolor"
+              >losses due to natural calamities like floods, droughts, hailstorms, pests, and diseases. It's mandatory for farmers who avail loan from banks for notified crops.
+              <br>Losses due to deviations from weather parameters like rainfall, temperature, and wind speed..</b
+            >
+          </div>
+          <button class="know-more-button">
+            <div class="know-more-button-child"></div>
+            <a href="{{ url_for('cropKnowmore') }}"><b class="know-more">Know More</b></a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="insurance-2">
+      <div class="insurance-2-child"></div>
+      <img
+        class="rectangle-frame-icon"
+        loading="eager"
+        alt=""
+        src="{{ url_for('static', filename='images/s2.jpg') }}"
+      />
+      <!--livestock.jpg-->
+
+      <div class="insurance-rect-parent">
+        <div class="insurance-rect">
+          <b class="tractor-insurance">Livestock Insurance</b>
+          <b class="lorem-ipsum-dolor1"
+            >Covers death due to natural causes, accidents, diseases, and theft. Different breeds and ages have separate options.
+            Protects against mortality due to diseases, predators, and natural calamities.death due to natural causes, accidents, and certain diseases for cattle, buffaloes, and sheep. Premiums are subsidized by the government, making it affordable for farmers.</b
+          >
+        </div>
+        <button class="know-more-button1">
+          <div class="know-more-button-item"></div>
+          <!--<a href="crop-insurance-knowmore.html"><b class="know-more1">Know More</b></a>-->
+          <a href="{{ url_for('liveKnowmore') }}"><b class="know-more1">Know More</b></a>
+        </button>
+      </div>
+    </div>
+    <div class="insurance-3">
+      <div class="insurance-3-child"></div>
+      <img
+        class="insurance-3-item"
+        loading="eager"
+        alt=""
+        src="{{ url_for('static', filename='images/personal.jpg') }}"
+      />
+
+      <div class="frame-parent">
+        <div class="drought-insurance-parent">
+          <b class="drought-insurance">Personal Insurance</b>
+          <b class="lorem-ipsum-dolor2"
+            >comprehensive scheme combines crop insurance, livestock insurance, personal accident insurance, and hut insurance.
+            Offers accidental death cover and a personal loan facility.
+            Affordable plans covering specific risks like failed wells, pump-set breakdown, and cycle rickshaw damage</b
+          >
+        </div>
+        <button class="know-more-button2" >
+          <div class="know-more-button-inner"></div>
+          <a href="{{ url_for('personalKnowmore') }}"><b class="know-more2">Know More</b></a>
+        </button>
+      </div>
+    </div>
+  </div>
+  {% endblock %} 
+
+

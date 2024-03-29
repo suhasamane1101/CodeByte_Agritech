@@ -1,0 +1,144 @@
+
+
+
+
+
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+	html body {
+	  background-color: rgb(128, 189, 247);
+	  <!-- background-image: url(cropped-fertilizer\ \(1\).jpg);
+	  background-repeat: no-repeat;
+	  width: 100%; -->
+	  
+	}
+  </style>
+    <div class="login">
+       <h1 ><center>Crop Yield prediction<center></h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+         <!-- <input type="text" name="Year" placeholder="Year" required="required" /><br>
+           <input type="text" name="average_rain_fall_mm_per_year" placeholder="average_rain_fall_mm_per_year" required="required" /><br>
+           <input type="text" name="pesticides_tonnes" placeholder="pesticides_tonnes" required="required" /><br>
+           <input type="text" name="avg_temp" placeholder="avg_temp" required="required" /><br>
+           <input type="text" name="Area" placeholder="Area" required="required" /><br>
+           <input type="text" name="Item" placeholder="Item" required="required" /><br> -->
+
+          <div style="    width: 350px;
+          height: 40rem;
+          margin: 0px auto;
+          color: black;
+          border-radius: 25px;
+          padding: 10px 10px;
+        ">
+           <div class="form-group">
+            <label for="Phosphorous" style="font-size: 17px"
+              ><b>Year</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              
+              name="Year"
+              placeholder="Year"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+
+
+          <div class="form-group">
+            <label for="Phosphorous" style="font-size: 17px"
+              ><b>Average Rainfall </b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              
+              name="average_rain_fall_mm_per_year"
+              placeholder="average_rain_fall_mm_per_year"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+   
+
+
+          <div class="form-group">
+            <label for="Phosphorous" style="font-size: 17px"
+              ><b>Pesticide Tonnes</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              
+              name="pesticides_tonnes"
+              placeholder="Pesticide Tonnes"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+
+
+          <div class="form-group">
+            <label for="Phosphorous" style="font-size: 17px"
+              ><b>Average Temprature</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              
+              name="avg_temp"
+              placeholder="Average Temprature"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Phosphorous" style="font-size: 17px"
+              ><b>Area</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              
+              name="Area"
+              placeholder="Area"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+
+
+          <div class="form-group">
+            <label for="Phosphorous" style="font-size: 17px"
+              ><b>Item</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              
+              name="Item"
+              placeholder="Item"
+              style="font-weight: bold"
+              required
+            />
+          </div>
+
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+      </div>
+    <h2>
+       The Crop Yield prediction is  {{result}}
+
+    </h2>
+    
+
+
+
+	{% endblock %} 

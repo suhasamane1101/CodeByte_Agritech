@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!--navbar ends here-->
+
+<style>
+    .imgNew {
+        width: 550px;
+        height: 350px;
+        /* margin-left:50px ;
+        margin-top: 50px; */
+        margin: 40px
+    }
+
+    .photo {
+        margin-top: 30px;
+    }
+
+    .parent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cnt {
+        margin-top: 48px;
+
+    }
+
+    .sub-cnt li {
+        margin: 5px;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    .sub-cnt-2 {
+        padding-top: 20px;
+    }
+</style>
+
+<div class="parent">
+    <div class="photo">
+        <!--<img src="./global.jpg" alt="">-->
+        
+        <img class="imgNew" src="{{ url_for('static', filename='images/global.jpg') }}" class="img-fluid" alt="" />
+    </div>
+    <div class="cnt">
+        <h3><strong>Global:</strong></h3>
+        <div class="sub-cnt">
+            <li><span><b>Tractor Makers to Focus on Agtech in 2024, Bracing for Equipment Slump:</b> Major
+                    manufacturers like John Deere and CNH are shifting their focus towards precision agriculture and
+                    data-driven solutions to cope with declining equipment sales. (Source: AgricultureDive)</span>
+            </li>
+            <li><span><b>Congress Averts Government Shutdown, Extends USDA Funding to March:</b> Farmers and
+                    agribusinesses breathe a sigh of relief as the U.S. Congress agrees on a spending deal that
+                    ensures continued funding for crucial agricultural programs. (Source: AgricultureDive)</span>
+            </li>
+            <li><span><b>Bayer Signals 'Significant' Layoffs in Plan to Shrink Bureaucracy:</b>The German
+                    pharmaceutical and agricultural giant announces plans to streamline operations and reduce costs,
+                    leading to job losses across various departments. (Source: AgricultureDive) </span></li>
+        </div>
+    </div>
+</div>
+<!-- 1st ends here-->
+
+<div class="parent">
+    <div class="photo">
+        <!--<img src="./indian-agriculture.jpg" alt="">-->
+        
+        <img class="imgNew" src="{{ url_for('static', filename='images/indian-agriculture.jpg') }}" class="img-fluid" alt="" />
+    </div>
+    <div class="cnt">
+        <h3><strong>India:</strong></h3>
+        <div class="sub-cnt">
+            <li><span><b>India's Rabi Acreage Near Last Year's Level on Higher Wheat, Oilseeds and Coarse Cereals
+                        Sowing:</b>Farmers in India continue to prioritize food security crops despite market
+                    fluctuations, driving stable planting numbers for key winter crops. (Source: The Hindu
+                    BusinessLine)</span>
+            </li>
+            <li><span><b>Keerti Feeds Signs MoU with Indian Immunologicals Ltd to Market Vaccines:</b> Collaboration
+                    aims to provide livestock farmers with improved access to essential vaccines and disease
+                    prevention measures. (Source: The Hindu BusinessLine)</span>
+            </li>
+            <li><span><b>Maharashtra Mills Pay 96% of Sugarcane Prices to Farmers:</b>Timely payments bring relief
+                    to sugarcane growers in Maharashtra, potentially boosting rural incomes and improving market
+                    sentiment. (Source: The Hindu BusinessLine) </span></li>
+        </div>
+    </div>
+</div>
+
+<div class="parent">
+    <div class="photo">
+        <!--<img src="./techinnovation.jpg" alt="">-->
+        
+        <img class="imgNew" src="{{ url_for('static', filename='images/techinnovation.jpg') }}" class="img-fluid" alt="" />
+    </div>
+    <div class="cnt">
+        <h3><strong>Tech and Innovation:</strong></h3>
+        <div class="sub-cnt">
+            <li><span><b>Deere Inks Deal Connecting Farm Equipment to SpaceX Satellites:</b>Partnership enables
+                    real-time data analytics and remote monitoring of agricultural machinery, paving the way for
+                    more efficient and data-driven farming practices. (Source: AgricultureDive)</span>
+            </li>
+            <li><span><b>CNH Invests Nearly $163 Million for Production of Next-Gen Combine Harvester:</b>The new
+                    CR11 promises increased output and efficiency, demonstrating continued advancements in
+                    agricultural technology. (Source: AgricultureDive)</span>
+            </li>
+            <li><span><b>Nutrients Where Needed: How to Prep Your Soil Fertility for a Vertical System:</b>Article
+                    explores innovative techniques for optimizing soil health in vertical farming setups, boosting
+                    productivity and sustainability in urban agriculture. (Source: AgWeb) </span></li>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 
+
+

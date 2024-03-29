@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <style>
+        .info{
+            text-align: center;
+            /* padding-left: 30px;
+            padding-right: 30px; */
+            padding: 30px;
+        }
+        .contact-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+    <div class="info">
+       <b> 1.Fill the form </b>
+       <br>
+        <b>2.Tell us about condition</b> 
+        <br>
+        <b>3.Our Doctors will contact you</b> 
+        <br>
+        <b>4.Be free now we will be taking the responsibility </b>
+    </div>
+    <div class="contact-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1VryKqOjHKknBRY7HEdzE3_GG5HVka4AJIHekuN9nMDn9oQ/viewform?embedded=true" width="640" height="1236" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+
+	{% endblock %} 
+
